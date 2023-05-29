@@ -6,21 +6,19 @@ public class Backstage_pass extends GildedRose{
 
     public void tick(){
         daysRemaining = daysRemaining -1;
-        if(quality == 50){
+        if(quality ==50){
             return;
         }
         quality = quality +1;
-        if(daysRemaining <= 10  && daysRemaining > 5){
-           quality = quality +1;
+        if(daysRemaining<=10){
+            quality = quality +1;
         }
-
-        if(daysRemaining <= 5){
-            quality = quality + 2;
+        if(daysRemaining<5){
+            quality = quality +1;
         }
-        else if(daysRemaining < 0){
+        if(daysRemaining < 0){
             quality = 0;
         }
-
     }
 
     public int getQuality(){

@@ -33,6 +33,20 @@ public class GildedRose {
             quality = backstage_pass.getQuality();
             daysRemaining = backstage_pass.getRemainingDays();
         }
+
+        else if(name.equals("Sulfuras, Hand of Ragnaros")){
+            Sulfuras sulfuras = new Sulfuras(name, quality, daysRemaining);
+            sulfuras.tick();
+            quality = sulfuras.getQuality();
+            daysRemaining = sulfuras.getRemainingDays();
+        }
+
+        else if(name.equals("Conjured Item")){
+            Conjured conjured = new Conjured(name, quality, daysRemaining);
+            conjured.tick();
+            quality = conjured.getQuality();
+            daysRemaining = conjured.getRemainingDays();
+        }
        
     }
     

@@ -6,16 +6,11 @@ public class Aged_Brie extends GildedRose{
 
     public void tick(){
         daysRemaining = daysRemaining -1;
-
-        if(quality < 20){
-            quality = quality  + 2;
-        }
-
-        else if(quality > 20 && quality <50){
+        if(quality <50 ){
             quality = quality +1;
         }
 
-        else if(daysRemaining >= 5 && quality == 10){
+        if(quality < 50 && daysRemaining <=0){
             quality = quality +1;
         }
     }

@@ -5,12 +5,15 @@ public class Normal_tick extends GildedRose{
 
     public void tick(){
         daysRemaining = daysRemaining - 1;
-        if(quality < 5){
+
+        if(quality > 0){
             quality = quality -1;
         }
-        else if(daysRemaining< 5){
-            quality = quality -2;
+
+        if(quality > 0 && daysRemaining <=0){
+            quality = quality -1;
         }
+
     }
 
     public int getQuality(){
